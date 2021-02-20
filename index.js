@@ -2,9 +2,14 @@ let videoplay = document.querySelector("video#player");
 let picture = document.querySelector('canvas#picture');
 let take = document.querySelector('button#TakePhoto');
 let save = document.querySelector("button#save");
-
+let filterSelect = document.querySelector('#filter')
 picture.width = 500;
 picture.height = 500;
+filterSelect.onchange = function(){
+    console.log(filterSelect.value)
+    picture.className = filterSelect.value;
+}
+
 take.onclick=function(){
     console.log("拍照")
     if(picture.getContext){

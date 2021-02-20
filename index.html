@@ -2,13 +2,41 @@
 <html>
   <head>
     <title>Realtime communication width webRTC</title>
+    <style>
+       .none {
+              -webkit-filter: none;
+         }
+ 
+         .blur {
+              -webkit-filter: blur(3px);
+         }
+ 
+         .grayscale {
+              -webkit-filter: grayscale(1);
+         }
+ 
+         .invert {
+              -webkit-filter: invert(1);
+         }
+ 
+         .sepia {
+              -webkit-filter: sepia(1);
+         }
+    </style>
   </head>
   <body>
     <h1>Realtime communication width webRTC</h1>
-    <button id = "TakePhoto" >Take</button>
+    <button id="TakePhoto">Take</button>
     <canvas id="picture"></canvas>
     <button id="save">保存</button>
     <video autoplay playsinline muted id="player"></video>
+    <select id="filter">
+      <option value="none">none</option>
+      <option value="blur">blur</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="invert">Invert</option>
+      <option value="sepia">sepia</option>
+    </select>
     <script src="index.js"></script>
   </body>
 </html>
